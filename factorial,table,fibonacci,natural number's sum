@@ -1,0 +1,134 @@
+1. Write a Python Program to Find the Factorial of a Number?
+1. Python Program to Find the Factorial of a Number using a loop:
+```python
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+
+number = int(input("Enter a number: "))
+result = factorial(number)
+print("Factorial:", result)
+
+
+2. Write a Python Program to Display the multiplication Table?
+```
+
+2. Python Program to Display the Multiplication Table using a loop:
+```python
+def multiplication_table(n):
+    for i in range(1, 11):
+        print(n, "x", i, "=", n * i)
+
+number = int(input("Enter a number: "))
+multiplication_table(number)
+```
+
+
+
+3. Write a Python Program to Print the Fibonacci sequence?
+def fibonacci_sequence(n):
+    sequence = []
+    a, b = 0, 1
+    while len(sequence) < n:
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+number = int(input("Enter the number of terms: "))
+result = fibonacci_sequence(number)
+print("Fibonacci Sequence:", result)
+
+
+
+4. Write a Python Program to Check Armstrong Number?
+Certainly! Here's the Python program to check for an Armstrong number:
+
+```python
+def is_armstrong_number(number):
+    order = len(str(number))
+    sum = 0
+    temp = number
+
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+
+    if number == sum:
+        return True
+    else:
+        return False
+
+number = int(input("Enter a number: "))
+
+if is_armstrong_number(number):
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+```
+
+
+In this program, we define the `is_armstrong_number()` function to determine if a given number is an Armstrong number. It takes the `number` as an input and calculates the order of the number (number of digits) using `len(str(number))`.
+
+We then initialize a `sum` variable to store the sum of the digits raised to the power of the order. The `temp` variable is used to store a temporary copy of the number for processing.
+
+In the while loop, we extract each digit from the rightmost position using `temp % 10` and raise it to the power of the order. We add this value to the `sum` and divide `temp` by 10 to remove the rightmost digit.
+
+Finally, we compare the `number` with the `sum` value. If they are equal, the number is an Armstrong number. Otherwise, it is not.
+
+The user is prompted to enter a number, and the program determines and prints whether it is an Armstrong number or not.
+
+
+5. Write a Python Program to Find Armstrong Number in an Interval?
+def is_armstrong_number(number):
+    order = len(str(number))
+    sum = 0
+    temp = number
+
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+
+    if number == sum:
+        return True
+    else:
+        return False
+
+lower = int(input("Enter the lower limit of the interval: "))
+upper = int(input("Enter the upper limit of the interval: "))
+
+armstrong_numbers = []
+
+for number in range(lower, upper + 1):
+    if is_armstrong_number(number):
+        armstrong_numbers.append(number)
+
+print("Armstrong Numbers:", armstrong_numbers)
+
+
+
+6. Write a Python Program to Find the Sum of Natural Numbers? 
+
+```python
+def sum_of_natural_numbers(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    return sum
+
+number = int(input("Enter a number: "))
+result = sum_of_natural_numbers(number)
+print("Sum of Natural Numbers:", result)
+```
+
+In this program, the `sum_of_natural_numbers()` function takes a number `n` as input and calculates the sum of natural numbers up to `n` using a loop.
+
+We initialize a `sum` variable to 0. Then, using a `for` loop, we iterate from 1 to `n+1`. In each iteration, we add the current number (`i`) to the `sum`.
+
+Finally, we return the `sum` from the function. The user is prompted to enter a number, and the program calculates and prints the sum of natural numbers up to that number.
+
+
+
